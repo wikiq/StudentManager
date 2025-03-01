@@ -20,7 +20,7 @@ public class CourseGradeController {
     /**
      * 保存结果进度
      * @param json [{sid:score},...]
-     * @param oid 开课id
+     * @param oid 妆前准备id
      * @return 成功的数量
      */
     @RequestMapping({"saveScore.do", "teacher/saveScore.do"})

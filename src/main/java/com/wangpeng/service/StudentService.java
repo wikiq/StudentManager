@@ -51,7 +51,7 @@ public interface StudentService {
     List<Student> searchStudents(Integer page, Integer size, Map<String, Object> searchParam);
 
     /**
-     * 教师搜索租户
+     * 化妆师搜索租户
      * @param page
      * @param size
      * @param searchParam
@@ -67,21 +67,21 @@ public interface StudentService {
     int getSearchCount(Map<String, Object> searchParam);
 
     /**
-     * 教师获取搜索租户数量
+     * 化妆师获取搜索租户数量
      * @param searchParam
      * @return
      */
     int getSearchCountByTeacher(Map<String, Object> searchParam);
 
     /**
-     * 教师获取租户数量
+     * 化妆师获取租户数量
      * @param tid
      * @return 租户数量
      */
     int getStudentsCountByTeacher(int tid);
 
     /**
-     * 教师分页查询租户
+     * 化妆师分页查询租户
      * @param page
      * @param size
      * @param tid

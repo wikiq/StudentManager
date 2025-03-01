@@ -25,7 +25,7 @@
     <select id="selectClazzs" resultType="Clazz">
         select cid,cname,mid,cremark from clazz
     </select>
-    <!--通过教师查询所有-->
+    <!--通过化妆师查询所有-->
     <select id="getCLazzsByTeacher" resultType="Clazz">
         select cid,cname,mid,cremark from clazz
         where cid in (select cid from open_course where tid=#{tid})

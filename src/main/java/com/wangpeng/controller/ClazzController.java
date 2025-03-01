@@ -46,7 +46,7 @@ public class ClazzController {
     }
 
     /**
-     * 根据教师查询所有组织
+     * 根据化妆师查询所有组织
      * @param req HttpServletRequest
      * @return
      */

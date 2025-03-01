@@ -55,10 +55,10 @@ public class LoginFilter implements Filter {
                 "\\/login\\/alterPassword\\.do" // 修改密码接口
         };
 
-        // 教师允许访问的地址的正则表达式表
+        // 化妆师允许访问的地址的正则表达式表
         String[] teacherPassRegex = {
-                "\\/teacher\\/.+\\.jsp",        // 教师界面
-                "\\/.+\\/teacher\\/.+\\.do",    // 教师接口
+                "\\/teacher\\/.+\\.jsp",        // 化妆师界面
+                "\\/.+\\/teacher\\/.+\\.do",    // 化妆师接口
                 "\\/common\\/password\\.jsp",   // 修改密码界面
                 "\\/login\\/alterPassword\\.do" // 修改密码接口
         };
@@ -76,7 +76,7 @@ public class LoginFilter implements Filter {
             return;
         }
 
-        // 如果登录的是教师
+        // 如果登录的是化妆师
         if(authority.equals("teacher")) {
             for (String regex : teacherPassRegex) {
                 if (basePath.matches(regex)) {  // 匹配上了，放行

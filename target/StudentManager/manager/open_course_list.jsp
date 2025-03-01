@@ -29,7 +29,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">拍摄时间</label>
             <div class="layui-input-block">
-                <input type="text" id="year" name="year" value="" lay-verify="required" lay-reqtext="开课名不能为空" placeholder="请输入" class="layui-input">
+                <input type="text" id="year" name="year" value="" lay-verify="required" lay-reqtext="妆前准备名不能为空" placeholder="请输入" class="layui-input">
             </div>
         </div>
         <!--档期-->
@@ -48,12 +48,12 @@
                 </select>
             </div>
         </div>
-        <%--教师--%>
+        <%--化妆师--%>
         <div class="layui-form-item">
-            <label class="layui-form-label">教师</label>
+            <label class="layui-form-label">化妆师</label>
             <div class="layui-input-block">
                 <select name="tid" id="edit_tid" lay-search="">
-                    <option value="">请选择教师</option>
+                    <option value="">请选择化妆师</option>
                 </select>
             </div>
         </div>
@@ -108,12 +108,12 @@
                                 </select>
                             </div>
                         </div>
-                        <%--教师--%>
+                        <%--化妆师--%>
                         <div class="layui-inline">
-                            <label class="layui-form-label">教师</label>
+                            <label class="layui-form-label">化妆师</label>
                             <div class="layui-input-inline">
                                 <select name="tid" id="search_tid" lay-search="">
-                                    <option value="">请选择教师</option>
+                                    <option value="">请选择化妆师</option>
                                 </select>
                             </div>
                         </div>
@@ -139,7 +139,7 @@
         <%--头部工具栏--%>
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
-                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加开课 </button>
+                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加妆前准备 </button>
                 <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"> 删除选中行 </button>
                 <button class="layui-btn layui-btn-sm layui-btn-warm data-plan-btn" lay-event="plan"> 课程排课 </button>
             </div>
@@ -159,7 +159,7 @@
         var $ = layui.jquery, form = layui.form, table = layui.table;
 
         $(function () {
-            //获取所有的组织、教师、课程信息
+            //获取所有的组织、化妆师、课程信息
             $.getJSON({
                 url: 'clazz/queryAllClazzs.do',
                 success: function (data) {

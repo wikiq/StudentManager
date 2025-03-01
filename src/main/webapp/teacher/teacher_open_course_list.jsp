@@ -10,7 +10,7 @@
 <head>
     <base href="<%=basePath%>" />
     <meta charset="utf-8">
-    <title>教师开课</title>
+    <title>化妆师妆前准备</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -40,7 +40,7 @@
         var $ = layui.jquery, form = layui.form, table = layui.table;
 
         $(function () {
-            //获取所有的组织、教师、课程信息
+            //获取所有的组织、化妆师、课程信息
             $.getJSON({
                 url: 'clazz/teacher/queryAllClazzsByTeacher.do',
                 success: function (data) {

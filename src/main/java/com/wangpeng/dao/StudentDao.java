@@ -57,7 +57,7 @@ public interface StudentDao {
     List<Student> searchStudentsByLimit(Map<String,Object> map);
 
     /**
-     * 教师分页搜索租户
+     * 化妆师分页搜索租户
      * @param map
      * @return
      */
@@ -71,7 +71,7 @@ public interface StudentDao {
     int getSearchCount(Map<String,Object> map);
 
     /**
-     * 教师搜索租户数量
+     * 化妆师搜索租户数量
      * @param searchParam
      * @return
      */
@@ -85,13 +85,13 @@ public interface StudentDao {
     Student checkByUsernameAndPassword(Map<String,Object> map);
 
     /**
-     * 教师获得租户数量
+     * 化妆师获得租户数量
      * @return
      */
     int getStudentsCountByTeacher(int tid);
 
     /**
-     * 教师分页查询租户
+     * 化妆师分页查询租户
      * @param begin
      * @param size
      * @param tid

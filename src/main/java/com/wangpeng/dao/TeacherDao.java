@@ -29,7 +29,7 @@ public interface TeacherDao {
     int updateTeacher(Teacher teacher);
 
     /**
-     * 根据id查教师
+     * 根据id查化妆师
      * @param tid
      * @return
      */
@@ -71,7 +71,7 @@ public interface TeacherDao {
     Teacher checkByUsernameAndPassword(Map<String,Object> map);
 
     /**
-     * 查询所有教师
+     * 查询所有化妆师
      * @return
      */
     List<Teacher> selectTeachers();

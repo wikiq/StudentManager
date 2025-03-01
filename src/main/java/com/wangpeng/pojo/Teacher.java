@@ -2,7 +2,7 @@ package com.wangpeng.pojo;
 
 public class Teacher {
     /**
-     * 教师id
+     * 化妆师id
      */
     private Integer tid;
     /**
@@ -10,7 +10,7 @@ public class Teacher {
      */
     private String tname;
     /**
-     * 教师职工号
+     * 化妆师职工号
      */
     private String tnum;
     /**

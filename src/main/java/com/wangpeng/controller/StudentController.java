@@ -54,7 +54,7 @@ public class StudentController {
     }
 
     /**
-     * 查询所有租户（教师权限）
+     * 查询所有租户（化妆师权限）
      * @param page  当前页码
      * @param limit 每页大小
      * @return 租户信息
@@ -160,7 +160,7 @@ public class StudentController {
     }
 
     /**
-     * 教师搜索租户
+     * 化妆师搜索租户
      * @param page
      * @param limit
      * @param json

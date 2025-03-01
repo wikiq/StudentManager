@@ -20,7 +20,7 @@ public class CourseGradeServiceImpl implements CourseGradeService {
 
     @Override
     public int saveCourseGrade(CourseGrade courseGrade) {
-        //先判断表里面有没有当前开课和租户id的结果
+        //先判断表里面有没有当前妆前准备和租户id的结果
         CourseGrade cgTmp = courseGradeDao.selectCourseGradeByOidAndSid(courseGrade.getOid(), courseGrade.getSid());
         int res = 0;
         if(cgTmp == null) res = courseGradeDao.insertCourseGrade(courseGrade);

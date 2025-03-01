@@ -10,7 +10,7 @@
 <head>
     <base href="<%=basePath%>">
     <meta charset="utf-8">
-    <title>教师首页</title>
+    <title>化妆师首页</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -120,11 +120,11 @@
                                         <div class="panel-body">
                                             <div class="panel-title">
                                                 <span class="label pull-right layui-bg-cyan">实时</span>
-                                                <h5>开课统计</h5>
+                                                <h5>妆前准备统计</h5>
                                             </div>
                                             <div class="panel-content">
                                                 <h1 class="no-margins" id="open_course_count">等待加载</h1>
-                                                <small>当前开课总数</small>
+                                                <small>当前妆前准备总数</small>
                                             </div>
                                         </div>
                                     </div>
@@ -141,9 +141,9 @@
                         <div class="welcome-module">
                             <div class="layui-row layui-col-space10 layuimini-qiuck">
                                 <div class="layui-col-xs3 layuimini-qiuck-module">
-                                    <a href="javascript:;" layuimini-content-href="teacher/teacher_information.jsp" data-title="教师信息" data-icon="fa fa-briefcase">
+                                    <a href="javascript:;" layuimini-content-href="teacher/teacher_information.jsp" data-title="化妆师信息" data-icon="fa fa-briefcase">
                                         <i class="fa fa-briefcase"></i>
-                                        <cite>教师信息</cite>
+                                        <cite>化妆师信息</cite>
                                     </a>
                                 </div>
                                 <div class="layui-col-xs3 layuimini-qiuck-module">
@@ -194,7 +194,7 @@
                                 <td>
                                     在线演示：<a href="http://47.97.104.230:8098/StudentManager/index.jsp" target="_blank">点击查看</a><br>
                                     管理员账号：admin       密码：admin<br>
-                                    教师端账号：15001       密码：123456<br>
+                                    化妆师端账号：15001       密码：123456<br>
                                     租户端账号：2020710001  密码：123456<br>
                                 </td>
                             </tr>

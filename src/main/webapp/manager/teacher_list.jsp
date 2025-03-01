@@ -163,9 +163,9 @@
         <%--头部工具栏--%>
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
-                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加教师 </button>
+                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加化妆师 </button>
                 <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"> 删除选中行 </button>
-                <button class="layui-btn layui-btn-sm data-plan-btn" lay-event="seeInfo"> 查看教师信息 </button>
+                <button class="layui-btn layui-btn-sm data-plan-btn" lay-event="seeInfo"> 查看化妆师信息 </button>
             </div>
         </script>
         <%--表格容器--%>
@@ -378,7 +378,7 @@
                 }
 
                 layer.open({
-                    title: "查看教师信息",
+                    title: "查看化妆师信息",
                     type: 2,    //iframe
                     maxmin: true,
                     shadeClose: true,

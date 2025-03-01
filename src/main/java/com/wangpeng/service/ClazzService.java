@@ -63,7 +63,7 @@ public interface ClazzService {
     List<Clazz> queryAllClazzs();
 
     /**
-     * 教师查询所有组织
+     * 化妆师查询所有组织
      * @param tid
      * @return
      */

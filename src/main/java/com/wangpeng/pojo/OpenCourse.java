@@ -2,7 +2,7 @@ package com.wangpeng.pojo;
 
 public class OpenCourse {
     /**
-     * 开课id
+     * 妆前准备id
      */
     private Integer oid;
     /**
@@ -22,7 +22,7 @@ public class OpenCourse {
      */
     private String cname;
     /**
-     * 教师id
+     * 化妆师id
      */
     private Integer tid;
     /**

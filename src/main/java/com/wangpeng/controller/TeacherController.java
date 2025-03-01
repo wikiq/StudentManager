@@ -19,24 +19,24 @@ public class TeacherController {
     TeacherService service;
 
     /**
-     * 查询所有教师
+     * 查询所有化妆师
      * @param page  当前页码
      * @param limit 每页大小
-     * @return 教师信息
+     * @return 化妆师信息
      */
     @RequestMapping("queryTeachers.do")
     public PageResult queryTeachers(Integer page, Integer limit){
-        //获取教师数量
+        //获取化妆师数量
         int count = service.getTeachersCount();
-        //获取教师信息
+        //获取化妆师信息
         List<Teacher> teachers = service.findTeachersByPage(page,limit);
         //返回结果
         return PageResult.success(count, teachers);
     }
 
     /**
-     * 查询所有教师
-     * @return 教师信息
+     * 查询所有化妆师
+     * @return 化妆师信息
      */
     @RequestMapping("queryAllTeachers.do")
     public List<Teacher> queryAllTeachers(){
@@ -44,8 +44,8 @@ public class TeacherController {
     }
 
     /**
-     * 根据tid查询教师
-     * @return 教师信息
+     * 根据tid查询化妆师
+     * @return 化妆师信息
      */
     @RequestMapping("queryTeacher.do")
     public Teacher queryTeacher(int tid){
@@ -54,8 +54,8 @@ public class TeacherController {
 
 
     /**
-     * 删除教师
-     * @param json 教师对象的json
+     * 删除化妆师
+     * @param json 化妆师对象的json
      * @return 成功行数
      */
     @RequestMapping("deleteTeachers.do")
@@ -66,8 +66,8 @@ public class TeacherController {
     }
 
     /**
-     * 添加一个教师
-     * @param json 教师对象的json
+     * 添加一个化妆师
+     * @param json 化妆师对象的json
      * @return 成功标志1
      */
     @RequestMapping("addTeacher.do")
@@ -77,8 +77,8 @@ public class TeacherController {
     }
 
     /**
-     * 修改一个教师
-     * @param json 教师对象的json
+     * 修改一个化妆师
+     * @param json 化妆师对象的json
      * @return 成功标志1
      */
     @RequestMapping("updateTeacher.do")
@@ -88,8 +88,8 @@ public class TeacherController {
     }
 
     /**
-     * 获取教师总数
-     * @return 教师总数
+     * 获取化妆师总数
+     * @return 化妆师总数
      */
     @RequestMapping("getAmount.do")
     public Integer getAmount() {
@@ -97,12 +97,12 @@ public class TeacherController {
     }
 
     /**
-     * 搜索教师
+     * 搜索化妆师
      * @param page 当前页码
      * @param limit 每页大小
      * @param json 搜索的参数
-     *             {"tname":教师姓名,"tnum":教师编号}
-     * @return 教师信息
+     *             {"tname":化妆师姓名,"tnum":化妆师编号}
+     * @return 化妆师信息
      */
     @RequestMapping("searchTeachers.do")
     public PageResult searchTeachers(Integer page, Integer limit, String json){
@@ -110,7 +110,7 @@ public class TeacherController {
         Map<String, Object> searchParam = JsonUtil.parseMap(json, String.class, Object.class);
         //获取查询个数
         int count = service.getSearchCount(searchParam);
-        //查询教师信息
+        //查询化妆师信息
         List<Teacher> teachers = service.searchTeachers(page, limit, searchParam);
         //返回结果
         return PageResult.success(count, teachers);

@@ -35,8 +35,8 @@ public class WelcomeController {
     }
 
     /**
-     * 教师获取首页数量
-     * @param tid 教师id
+     * 化妆师获取首页数量
+     * @param tid 化妆师id
      * @return 数量信息
      */
     @GetMapping("teacher/getAllCountByTeacher.do")

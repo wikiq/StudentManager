@@ -23,14 +23,14 @@ public class OpenCourseController {
     OpenCourseService service;
 
     /**
-     * 查询开课
+     * 查询妆前准备
      * @param page  当前页码
      * @param limit 每页大小
-     * @return 开课信息
+     * @return 妆前准备信息
      */
     @RequestMapping({"queryOpenCourses.do", "teacher/queryOpenCourses.do"})
     public PageResult queryOpenCourses(Integer page, Integer limit){
-        //获取开课数量
+        //获取妆前准备数量
         int count = service.getOpenCoursesCount();
         //获取数据
         List<OpenCourse> openCourses = service.findOpenCoursesByPage(page,limit);
@@ -39,16 +39,16 @@ public class OpenCourseController {
     }
 
     /**
-     * 查询开课(教师权限)
+     * 查询妆前准备(化妆师权限)
      * @param page  当前页码
      * @param limit 每页大小
-     * @return 开课信息
+     * @return 妆前准备信息
      */
     @RequestMapping("teacher/queryOpenCoursesByTeacher.do")
     public PageResult queryOpenCoursesByTeacher(Integer page, Integer limit, HttpServletRequest req){
         //获取当前账号信息
         Teacher loginTeacher =  (Teacher) req.getSession().getAttribute("loginObj");
-        //获取开课数量
+        //获取妆前准备数量
         int count = service.getOpenCoursesCountByTeacher(loginTeacher.getTid());
         //获取数据
         List<OpenCourse> openCourses = service.findOpenCoursesByPageByTeacher(page,limit,loginTeacher.getTid());
@@ -58,7 +58,7 @@ public class OpenCourseController {
 
     /**
      * 查询(租户权限)
-     * @return 开课信息
+     * @return 妆前准备信息
      */
     @RequestMapping("student/queryOpenCoursesByStudent.do")
     public PageResult queryOpenCoursesByStudent(Integer oid, HttpServletRequest req){
@@ -71,8 +71,8 @@ public class OpenCourseController {
     }
 
     /**
-     * 查询所有开课
-     * @return 开课信息
+     * 查询所有妆前准备
+     * @return 妆前准备信息
      */
     @RequestMapping("queryAllOpenCourses.do")
     public List<OpenCourse> queryAllOpenCourses(){
@@ -80,8 +80,8 @@ public class OpenCourseController {
     }
 
     /**
-     * 删除开课
-     * @param json 开课对象的json
+     * 删除妆前准备
+     * @param json 妆前准备对象的json
      * @return 成功行数
      */
     @RequestMapping("deleteOpenCourses.do")
@@ -92,8 +92,8 @@ public class OpenCourseController {
     }
 
     /**
-     * 添加一个开课
-     * @param json 开课对象的json
+     * 添加一个妆前准备
+     * @param json 妆前准备对象的json
      * @return 成功标志1
      */
     @RequestMapping("addOpenCourse.do")
@@ -103,8 +103,8 @@ public class OpenCourseController {
     }
 
     /**
-     * 修改一个开课
-     * @param json 开课对象的json
+     * 修改一个妆前准备
+     * @param json 妆前准备对象的json
      * @return 成功标志1
      */
     @RequestMapping("updateOpenCourse.do")
@@ -114,8 +114,8 @@ public class OpenCourseController {
     }
 
     /**
-     * 获取开课总数
-     * @return 开课总数
+     * 获取妆前准备总数
+     * @return 妆前准备总数
      */
     @RequestMapping("getAmount.do")
     public Integer getAmount() {
@@ -123,12 +123,12 @@ public class OpenCourseController {
     }
 
     /**
-     * 搜索开课
+     * 搜索妆前准备
      * @param page 当前页码
      * @param limit 每页大小
      * @param json 搜索参数的json
-     *             {"year":拍摄时间,"term":档期,"cid":组织id,"tid":教师id,"courseId":课程id}
-     * @return 开课信息
+     *             {"year":拍摄时间,"term":档期,"cid":组织id,"tid":化妆师id,"courseId":课程id}
+     * @return 妆前准备信息
      */
     @RequestMapping({"searchOpenCourses.do", "student/searchOpenCourses.do", "teacher/searchOpenCourses.do"})
     public PageResult searchOpenCourses(Integer page, Integer limit, String json){

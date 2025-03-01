@@ -113,7 +113,7 @@
             cols: [[
                 {type: "checkbox"},
                 /*{field: 'ctid', title: '序号', sort: true},*/
-                /*{field: 'oid', title: '开课id'},*/
+                /*{field: 'oid', title: '妆前准备id'},*/
                 {field: 'rname', title: '摄影室'},
                 {field: 'weekno', title: '周数',minWidth: 300},
                 {field: 'week', title: '星期'},

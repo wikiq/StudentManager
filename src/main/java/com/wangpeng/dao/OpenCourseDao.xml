@@ -4,40 +4,40 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--namespace=绑定对应的Dao/Mapper接口-->
 <mapper namespace="com.wangpeng.dao.OpenCourseDao">
-    <!--添加开课-->
+    <!--添加妆前准备-->
     <insert id="insertOpenCourse" parameterType="OpenCourse">
         insert into open_course(oid,year,term,cid,tid,courseId,remark)
         values(#{oid},#{year},#{term},#{cid},#{tid},#{courseId},#{remark})
     </insert>
-    <!--删除开课-->
+    <!--删除妆前准备-->
     <delete id="deleteOpenCourses" parameterType="OpenCourse">
         delete from open_course where oid in
         <foreach collection="list" open="(" close=")" item="obj" separator=",">
             #{obj.oid}
         </foreach>
     </delete>
-    <!--修改开课-->
+    <!--修改妆前准备-->
     <update id="updateOpenCourse" parameterType="OpenCourse">
         update open_course set year=#{year},term=#{term},cid=#{cid},tid=#{tid},courseId=#{courseId},remark=#{remark}
         where oid=#{oid}
     </update>
-    <!--查询所有开课-->
+    <!--查询所有妆前准备-->
     <select id="selectOpenCourses" resultType="OpenCourse">
         select oid,year,term,cid,tid,courseId,remark from open_course
     </select>
-    <!--根据id查询开课-->
+    <!--根据id查询妆前准备-->
     <select id="selectOpenCourse" resultType="OpenCourse">
         select oid,year,term,cid,tid,courseId,remark from open_course where oid = #{oid}
     </select>
-    <!--分页查询开课-->
+    <!--分页查询妆前准备-->
     <select id="selectOpenCoursesByLimit" resultType="OpenCourse">
         select oid,year,term,cid,tid,courseId,remark from open_course limit #{begin},#{size}
     </select>
-    <!--获取开课数量-->
+    <!--获取妆前准备数量-->
     <select id="getOpenCoursesCount" resultType="int">
         select count(*) from open_course
     </select>
-    <!--分页搜索开课-->
+    <!--分页搜索妆前准备-->
     <select id="searchOpenCoursesByLimit" resultType="OpenCourse">
         select oid,year,term,cid,tid,courseId,remark from open_course
         <where>
@@ -83,19 +83,19 @@
     <select id="getOpenCoursesCountByTeacher" resultType="int">
         select count(*) from open_course where tid = #{tid}
     </select>
-    <!--分页查询开课-->
+    <!--分页查询妆前准备-->
     <select id="selectOpenCoursesByLimitByTeacher" resultType="OpenCourse">
         select oid,year,term,cid,tid,courseId,remark from open_course
         where tid=#{tid}
         limit #{begin},#{size}
     </select>
-    <!--查询租户的开课和结果信息（自定义的结果集）-->
+    <!--查询租户的妆前准备和结果信息（自定义的结果集）-->
     <select id="selectOpenCoursesByStudent" resultType="OpenCourseAndScore">
         select year,term,tid,courseId,remark,score
         from open_course,course_grade
         where open_course.oid = course_grade.oid and sid = #{sid}
     </select>
-    <!--获取某租户的开课数量-->
+    <!--获取某租户的妆前准备数量-->
     <select id="getOpenCoursesCountByStudent" resultType="int">
         select count(*) from open_course
         where cid = ( select cid from student where sid=#{sid} )

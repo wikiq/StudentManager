@@ -69,7 +69,7 @@
                     <label class="layui-icon layui-icon-password" for="authority"></label>
                     <select name="authority" id="authority">
                         <option value="manager" selected="selected">管理员</option>
-                        <option value="teacher">教师</option>
+                        <option value="teacher">化妆师</option>
                         <option value="student">租户</option>
                     </select>
                 </div>

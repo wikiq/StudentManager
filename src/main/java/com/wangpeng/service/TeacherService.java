@@ -8,7 +8,7 @@ import java.util.Map;
 public interface TeacherService {
 
     /**
-     * 分页找所有教师
+     * 分页找所有化妆师
      * @param page
      * @param size
      * @return
@@ -16,33 +16,33 @@ public interface TeacherService {
     List<Teacher> findTeachersByPage(int page, int size);
 
     /**
-     * 获取教师总数
+     * 获取化妆师总数
      * @return
      */
     int getTeachersCount();
 
     /**
-     * 删除指定教师
+     * 删除指定化妆师
      * @param teachers
      * @return 删除成功的数量
      */
     int deleteTeachers(List<Teacher> teachers);
 
     /**
-     * 添加一个教师
+     * 添加一个化妆师
      * @param teacher
      */
     int addTeacher(Teacher teacher);
 
     /**
-     * 修改一个教师
+     * 修改一个化妆师
      * @param teacher
      * @return
      */
     int updateTeacher(Teacher teacher);
 
     /**
-     * 搜索教师
+     * 搜索化妆师
      * @param page
      * @param size
      * @param searchParam
@@ -57,13 +57,13 @@ public interface TeacherService {
     int getSearchCount(Map<String, Object> searchParam);
 
     /**
-     * 找所有教师
+     * 找所有化妆师
      * @return
      */
     List<Teacher> findAllTeachers();
 
     /**
-     * 通过教师id找教师
+     * 通过化妆师id找化妆师
      * @param tid
      * @return
      */

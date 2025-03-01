@@ -6,7 +6,7 @@ public class ArrangeCourse {
      */
     private Integer ctid;
     /**
-     * 开课id
+     * 妆前准备id
      */
     private Integer oid;
     /**

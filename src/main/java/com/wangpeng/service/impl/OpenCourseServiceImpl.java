@@ -18,7 +18,7 @@ public class OpenCourseServiceImpl implements OpenCourseService {
     @Autowired
     OpenCourseDao openCourseDao;
 
-    // 组织、教师、课程
+    // 组织、化妆师、课程
     @Autowired
     ClazzDao clazzDao;
     @Autowired
@@ -32,7 +32,7 @@ public class OpenCourseServiceImpl implements OpenCourseService {
     }
 
     /**
-     * 为开课列表添加信息
+     * 为妆前准备列表添加信息
      * @param openCourses
      */
     private void addInfoForOpenCourses(List<OpenCourse> openCourses) {

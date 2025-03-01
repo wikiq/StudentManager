@@ -9,41 +9,41 @@ import java.util.Map;
 
 public interface OpenCourseDao {
     /**
-     * 添加开课
+     * 添加妆前准备
      * @param openCourse
      * @return
      */
     int insertOpenCourse(OpenCourse openCourse);
 
     /**
-     * 删除开课
+     * 删除妆前准备
      * @param openCourses
      * @return
      */
     int deleteOpenCourses(List<OpenCourse> openCourses);
 
     /**
-     * 修改开课
+     * 修改妆前准备
      * @param openCourse
      * @return
      */
     int updateOpenCourse(OpenCourse openCourse);
 
     /**
-     * 查询所有开课
+     * 查询所有妆前准备
      * @return
      */
     List<OpenCourse> selectOpenCourses();
 
     /**
-     * 根据id查询开课
+     * 根据id查询妆前准备
      * @param id
      * @return
      */
     OpenCourse selectOpenCourse(Integer id);
 
     /**
-     * 分页查询开课
+     * 分页查询妆前准备
      * @param begin 起始索引，从0开始
      * @param size  每页大小
      * @return
@@ -51,13 +51,13 @@ public interface OpenCourseDao {
     List<OpenCourse> selectOpenCoursesByLimit(@Param("begin") int begin, @Param("size")int size);
 
     /**
-     * 获取开课数量
+     * 获取妆前准备数量
      * @return
      */
     int getOpenCoursesCount();
 
     /**
-     * 分页搜索开课
+     * 分页搜索妆前准备
      * @param map 4个参数，begin,size,mname,mdept
      * @return
      */
@@ -75,14 +75,14 @@ public interface OpenCourseDao {
     List<OpenCourse> selectOpenCoursesByLimitByTeacher(@Param("begin")int begin, @Param("size")Integer size, @Param("tid")Integer tid);
 
     /**
-     * 查询租户的开课和结果信息
+     * 查询租户的妆前准备和结果信息
      * @param sid
      * @return
      */
     List<OpenCourseAndScore> selectOpenCoursesByStudent(Integer sid);
 
     /**
-     * 获取某租户的开课数量
+     * 获取某租户的妆前准备数量
      * @return
      */
     int getOpenCoursesCountByStudent(Integer sid);

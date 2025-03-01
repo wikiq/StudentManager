@@ -16,13 +16,13 @@
       "target": "_self",
       "child": [
         {
-          "title": "教师功能",
+          "title": "化妆师功能",
           "href": "",
           "icon": "fa fa-home",
           "target": "_self",
           "child": [
             {
-              "title": "教师信息",
+              "title": "化妆师信息",
               "href": "teacher/teacher_information.jsp",
               "icon": "fa fa-briefcase",
               "target": "_self"

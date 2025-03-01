@@ -8,7 +8,7 @@ public class CourseGrade {
      */
     private Integer cgid;
     /**
-     * 开课id
+     * 妆前准备id
      */
     private Integer oid;
     /**
